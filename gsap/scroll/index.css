@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  width: 100vw;
+  height: 100vh;
+}
+section:nth-child(1) {
+  background-color: skyblue;
+}
+section:nth-child(2) {
+  background-color: thistle;
+}
+section:nth-child(3) {
+  background-color: grey;
+}
+section:nth-child(4) {
+  background-color: rosybrown;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: brown;
+}
+h2 {
+  text-align: center;
+  line-height: 70vh;
+}

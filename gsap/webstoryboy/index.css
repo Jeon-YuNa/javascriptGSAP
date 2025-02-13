@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+#section1,
+#section3 {
+  background-color: #333;
+}
+#section1 .box {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+#section2 {
+  background-color: #555;
+}
+#section2 .circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#section3 .bounce {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: burlywood;
+}
