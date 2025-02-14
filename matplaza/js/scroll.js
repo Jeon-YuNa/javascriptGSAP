@@ -29,44 +29,44 @@ const main_scroll_tl = gsap.timeline({
     end: "+=3000vh",
     pin: true,
     scrub: 1,
-    markers: true,
   },
 });
-main_scroll_tl.to("#section1 .wrap", { y: "-1000px" });
-main_scroll_tl.to("#mainBox", { y: "1000px" }, "<");
+main_scroll_tl.to("#section1 .wrap", { y: "-104vh" });
+main_scroll_tl.to("#mainBox", { y: "104vh" }, "<");
 main_scroll_tl.fromTo(
   "#section1 .global p",
   { opacity: 0, y: 100 },
   { opacity: 1, y: 0 }
 );
 
-const section2_tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#section2",
-    start: "top top",
-    end: "+=4000px",
-    pin: true,
-    scrub: 2,
-    ease: "ease-in-out",
-    markers: true,
-  },
-});
-const List = gsap.utils.toArray("#section2 article.event");
-List.forEach((item, i) => {
-  section2_tl.to(
-    item,
-    {
-      height: "200px",
-      duration: 4,
+if (matchMedia("screen and (min-width: 1080px)").matches) {
+  const section2_tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#section2",
+      start: "top top",
+      end: "+=4000px",
+      pin: true,
+      scrub: 2,
+      ease: "ease-in-out",
     },
-    "-=2"
-  );
-  section2_tl.to(
-    "#section2 > .wrap",
-    { translateY: `-${(i + 1) * 200}px`, duration: 4 },
-    "-=1"
-  );
-});
+  });
+  const List = gsap.utils.toArray("#section2 article.event");
+  List.forEach((item, i) => {
+    section2_tl.to(
+      item,
+      {
+        height: "200px",
+        duration: 4,
+      },
+      "-=2"
+    );
+    section2_tl.to(
+      "#section2 > .wrap",
+      { translateY: `-${(i + 1) * 200}px`, duration: 4 },
+      "-=1"
+    );
+  });
+}
 
 const section3_tl = gsap.timeline({
   scrollTrigger: {
@@ -74,7 +74,6 @@ const section3_tl = gsap.timeline({
     start: "top bottom",
     end: "bottom bottom",
     ease: "linear",
-    markers: true,
   },
 });
 section3_tl.fromTo(

@@ -59,7 +59,6 @@ footer .bottom {
   border-bottom: 0;
   display: flex;
   justify-content: space-between;
-  padding: 20px 0 25px;
 }
 footer .bottom ul {
   display: flex;
